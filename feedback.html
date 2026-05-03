@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback — Traversy Media</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand">Traversy Media</a>
+      <ul class="navbar-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="feedback.html" class="active">Feedback</a></li>
+        <li><a href="feedback-list.html">View Feedback</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <!-- Hero -->
+      <div class="page-hero">
+        <div class="logo-circle">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <circle cx="7"  cy="8"  r="2.2" fill="currentColor"/>
+            <circle cx="14" cy="8"  r="2.2" fill="currentColor"/>
+            <circle cx="21" cy="8"  r="2.2" fill="currentColor"/>
+            <circle cx="14" cy="15" r="2.2" fill="currentColor"/>
+            <circle cx="14" cy="22" r="2.2" fill="currentColor"/>
+          </svg>
+        </div>
+        <h1>Feedback</h1>
+        <p>Leave feedback for Traversy Media</p>
+      </div>
+
+      <!-- Form card -->
+      <div class="card" style="max-width:540px; margin:0 auto 4rem;">
+        <form id="feedback-form" novalidate>
+
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              autocomplete="name"
+            />
+            <span class="field-error" id="name-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              autocomplete="email"
+            />
+            <span class="field-error" id="email-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Feedback</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Enter your feedback"
+              rows="5"
+            ></textarea>
+            <span class="field-error" id="message-error"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Feedback</button>
+
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; 2022 Traversy Media</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

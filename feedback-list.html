@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Feedback — Traversy Media</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand">Traversy Media</a>
+      <ul class="navbar-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="feedback-list.html" class="active">View Feedback</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container" style="padding-top:2.5rem;">
+
+      <div class="section-heading">
+        <h2>All Feedback</h2>
+        <span class="badge" id="count-badge"></span>
+      </div>
+
+      <div class="feedback-grid" id="feedback-list">
+        <!-- Populated by JS -->
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; 2022 Traversy Media</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Update badge count after load
+    const observer = new MutationObserver(() => {
+      const cards = document.querySelectorAll('.feedback-card');
+      const badge = document.getElementById('count-badge');
+      if (cards.length > 0) badge.textContent = cards.length + ' entries';
+    });
+    observer.observe(document.getElementById('feedback-list'), { childList: true });
+  </script>
+</body>
+</html>
