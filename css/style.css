@@ -21,6 +21,20 @@
   --font:        'DM Sans', sans-serif;
 }
 
+[data-theme="dark"] {
+  --brand:       #3b82f6;
+  --brand-dark:  #2563eb;
+  --brand-light: #1e3a5f;
+  --text:        #f3f4f6;
+  --muted:       #9ca3af;
+  --border:      #374151;
+  --bg:          #111827;
+  --white:       #1f2937;
+  --success:     #10b981;
+  --error:       #ef4444;
+  --shadow:      0 1px 3px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.25);
+}
+
 html { scroll-behavior: smooth; }
 
 body {
@@ -68,6 +82,20 @@ body {
 }
 .navbar-links a:hover,
 .navbar-links a.active { color: var(--brand); }
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: .4rem;
+  margin-left: .75rem;
+  color: var(--muted);
+  transition: color .2s;
+  display: flex;
+  align-items: center;
+}
+.theme-toggle:hover { color: var(--brand); }
+.theme-toggle svg { width: 20px; height: 20px; }
 
 /* ── Page layout ──────────────────────────────────────────────────────── */
 main { flex: 1; }
@@ -187,7 +215,7 @@ main { flex: 1; }
 .card-name  { display: block; font-weight: 600; font-size: .9rem; color: var(--text); }
 .card-email { display: block; font-size: .8rem; color: var(--muted); }
 .card-date  { font-size: .78rem; color: var(--muted); white-space: nowrap; }
-.card-message { font-size: .93rem; color: #374151; line-height: 1.65; }
+.card-message { font-size: .93rem; color: var(--text); line-height: 1.65; }
 
 /* ── Loading / empty states ───────────────────────────────────────────── */
 .loading-state, .empty-state {
