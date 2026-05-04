@@ -1,0 +1,21 @@
+# Environment / config with secrets
+.env
+*.env
+
+# Database config
+config.php
+api/db.php
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
